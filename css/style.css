@@ -1,98 +1,182 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: Raleway;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Raleway;
 }
 
-.container{
-    background-image:url("../images/bg-mobile.png");
-    max-width: 375px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+.container {
+  background-image: url("../images/bg-mobile.png");
+  min-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.stcard{
-    width: 90%;
-    margin-bottom: 20px;
-    background-color: #1E2C69;
-    padding: 40px;
-    border-radius:8px 80px 8px 8px ;
-    -webkit-border-radius:8px 80px 8px 8px ;
-    -moz-border-radius:8px 80px 8px 8px ;
-    -ms-border-radius:8px 80px 8px 8px ;
-    -o-border-radius:8px 80px 8px 8px ;
+.stcard {
+  width: 85%;
+  margin-bottom: 20px;
+  background-color: #1e2c69;
+  padding: 40px;
+  border-radius: 8px 80px 8px 8px;
+  -webkit-border-radius: 8px 80px 8px 8px;
+  -moz-border-radius: 8px 80px 8px 8px;
+  -ms-border-radius: 8px 80px 8px 8px;
+  -o-border-radius: 8px 80px 8px 8px;
 }
-.stcard > img{
-    margin-bottom: 30px;
+.stcard > img {
+  margin-bottom: 30px;
 }
 
-.stcard .icons{
-    display: flex;
-    justify-content: flex-start;
+.stcard .icons {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.stcard .icons .box {
+  width: 45px;
+  height: 45px;
+  background-color: #0b122b;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.ndcard {
+  width: 85%;
+  background-color: #1e2c69;
+  padding: 30px;
+  border-radius: 8px;
+  min-height: 150px;
+  position: relative;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ndcard p {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.ndcard p span {
+  font-weight: 900;
+}
+.ndcard .whitebox {
+  width: 150px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  font-weight: 700;
+  font-size: 30px;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  margin-top: -37.5px;
+  margin-right: -75px;
+}
+
+.ndcard .whitebox span {
+  color: #909096;
+  font-size: 12px;
+  font-weight: 900;
+  position: relative;
+  top: -3px;
+}
+
+.progress {
+  width: 280px;
+  height: 18px;
+  background-color: #141f4a;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  position: relative;
+}
+.progress::before {
+  content: "0 GB";
+  position: absolute;
+  color: white;
+  top: 30px;
+  font-size: 12px;
+}
+.progress::after {
+  content: "1000 GB";
+  position: absolute;
+  color: white;
+  top: 30px;
+  right: 0px;
+  font-size: 12px;
+}
+
+.progress .bar {
+  position: relative;
+  width: 81.5%;
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
+  height: 18px;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+  border: solid 2px black;
+}
+.bar::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  top: 2px;
+}
+
+@media (min-width: 800px) {
+  .container {
     flex-direction: row;
-}
-.stcard .icons .box{
-    width: 40px;
-    height: 40px;
-    background-color: #0B122B;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-}
-.ndcard{
-    width: 90%;
-    background-color: #1E2C69;
-    padding: 40px;
-    border-radius: 8px;
-    min-height: 150px;
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #0c122c;
     position: relative;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-.ndcard p{
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    font-weight: 400;
-}
-.ndcard p span{
-    font-weight: 900;
-}
-.ndcard .whitebox{
-    width:150px;
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    font-weight: 700;
-    font-size: 30px;
-    position: absolute;
-    top: 100%;
-    right: 50%;
-    margin-top: -37.5px;
-    margin-right: -75px;
-}
-
-.ndcard .whitebox span{
-    color: #909096;
-    font-size: 12px;
-    font-weight: 900;
+  }
+  .stcard {
+    width: 35%;
+    margin: 0px;
+    margin-right: 50px;
     position: relative;
-    top: -3px;
+    top: -50%;
+  }
+  .ndcard {
+    width: 45%;
+  }
 }
