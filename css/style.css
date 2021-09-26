@@ -25,6 +25,11 @@
   -moz-border-radius: 8px 80px 8px 8px;
   -ms-border-radius: 8px 80px 8px 8px;
   -o-border-radius: 8px 80px 8px 8px;
+  transition: all ease-in-out 1s;
+  -webkit-transition: all ease-in-out 1s;
+  -moz-transition: all ease-in-out 1s;
+  -ms-transition: all ease-in-out 1s;
+  -o-transition: all ease-in-out 1s;
 }
 .stcard > img {
   margin-bottom: 30px;
@@ -64,6 +69,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  transition: ease-in-out 1.5s;
+  transition: all ease-in-out 1s;
+  -webkit-transition: all ease-in-out 1s;
+  -moz-transition: all ease-in-out 1s;
+  -ms-transition: all ease-in-out 1s;
+  -o-transition: all ease-in-out 1s;
 }
 .ndcard p {
   color: white;
@@ -92,6 +103,11 @@
   right: 50%;
   margin-top: -37.5px;
   margin-right: -75px;
+  transition: all ease-in-out 1s;
+  -webkit-transition: ease-in-out 1.5s;
+  -moz-transition: ease-in-out 1.5s;
+  -ms-transition: ease-in-out 1.5s;
+  -o-transition: ease-in-out 1.5s;
 }
 
 .ndcard .whitebox span {
@@ -103,7 +119,7 @@
 }
 
 .progress {
-  width: 280px;
+  width: 90%;
   height: 18px;
   background-color: #141f4a;
   border-radius: 18px;
@@ -174,9 +190,54 @@
     margin: 0px;
     margin-right: 50px;
     position: relative;
-    top: -50%;
-  }
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
   .ndcard {
     width: 45%;
-  }
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    align-items: flex-start;
+}
+.ndcard .whitebox{
+  width: 180px;
+  margin: 0;
+  top: 0;
+  transform: skewY();
+  transform: translateY(-70%);
+  right: 25px;
+  border-radius: 0px;
+  border-radius: 15px 15px 0 15px;
+  -webkit-border-radius: 15px 15px 0 15px;
+  -moz-border-radius: 15px 15px 0 15px;
+  -ms-border-radius: 15px 15px 0 15px;
+  -o-border-radius: 15px 15px 0 15px;
+  -webkit-transform: translateY(-70%);
+  -moz-transform: translateY(-70%);
+  -ms-transform: translateY(-70%);
+  -o-transform: translateY(-70%);
+}
+.ndcard .whitebox::after{
+ content: "";
+ width: 00px;
+ height: 00px;
+ border-color: transparent white transparent transparent;
+ border-width: 25px;
+ border-style: solid;
+ position: absolute;
+ right: 0px;
+ top: 100%;
+ 
+ transform: translateY(-50%);
+ -webkit-transform: translateY(-50%);
+ -moz-transform: translateY(-50%);
+ -ms-transform: translateY(-50%);
+ -o-transform: translateY(-50%);
+}
 }
