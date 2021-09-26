@@ -184,7 +184,12 @@
     background-position: bottom;
     background-color: #0c122c;
     position: relative;
-  }
+    transition: ease 3s all;
+    -webkit-transition: ease 3s all;
+    -moz-transition: ease 3s all;
+    -ms-transition: ease 3s all;
+    -o-transition: ease 3s all;
+}
   .stcard {
     width: 35%;
     margin: 0px;
